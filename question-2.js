@@ -7,3 +7,14 @@ const students = [
 ];
 
 // เริ่มเขียนโค้ดตรงนี้
+
+function totalScore(students) {
+  return students.filter((scores) => scores.score > 50)
+  .map((scores) => scores.score +((scores.score*10) /100 ))
+  .reduce((acc , scores) => acc + scores , 0)
+  
+}
+
+console.log(`Total score is ${totalScore(students)}`);
+
+
