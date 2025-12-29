@@ -10,3 +10,14 @@ const techcoolPeople = [
 ];
 
 // เริ่มเขียนโค้ดตรงนี้
+//รวมค่า array ให้เป็นก้อนเดียว
+// filter หา อายุน้อยกว่า 20
+let allPeople = [...techupPeople,...techcoolPeople]
+
+function filterUnder20(allPeople) {
+  return allPeople.filter((person) => person.age < 20)
+}
+
+
+
+console.log(filterUnder20(allPeople));
